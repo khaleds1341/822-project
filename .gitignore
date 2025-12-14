@@ -1,8 +1,0 @@
-# Ignore Word temporary files
-~$*
-
-# Ignore temp files
-*.tmp
-*.log
-*.pyc
-
