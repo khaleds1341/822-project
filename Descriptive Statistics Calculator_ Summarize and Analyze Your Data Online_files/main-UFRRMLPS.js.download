@@ -1,0 +1,787 @@
+import{a as R,c as ie}from"./chunk-UKRMTFB7.js";import{a as rt}from"./chunk-RXTR7XRU.js";import{a as Ze,v as it}from"./chunk-4XEMH2EB.js";import{a as tt}from"./chunk-GNLM5NIX.js";import{a as N}from"./chunk-57AIYDMJ.js";import{a as nt,b as re}from"./chunk-LF3BVBP5.js";import{b as ee,c as te,f as ne,q as Qe}from"./chunk-OQWC32CO.js";import{a as et}from"./chunk-F3SVO3KS.js";import{d as E}from"./chunk-IJWADPRE.js";import{$ as Me,$a as Y,A as P,Aa as m,B as ve,E as ye,Gb as Re,H as j,Ha as n,Hb as Ve,Ia as t,Ib as D,J as we,Ja as c,Jb as M,M as W,N as $,Na as b,O as _e,Oa as x,Ob as Ue,P as q,Pa as u,Sb as _,T as Ce,V as f,Va as Le,Vb as Be,W as S,Wa as Oe,Wb as je,Xa as qe,Xb as We,Y as ke,Yb as He,Za as e,Zb as ze,_ as Ie,_a as k,_b as Ke,a as he,aa as Ae,ac as $e,ba as C,cc as Je,da as de,dc as Ye,ea as F,ec as y,fc as Ge,ga as H,gc as Xe,ha as Te,i as fe,ia as s,ib as G,j as Se,ja as g,jb as X,kb as Z,m as ge,n as Q,nb as Fe,o as be,ob as ue,pa as v,qa as J,r as T,s as Ee,t as se,tb as De,v as me,va as d,vb as Ne,w as ce,x as O,xa as Pe,y as B,ya as pe}from"./chunk-3WO47KIM.js";var ae=(()=>{class r{constructor(i,a){this.http=i,this.platformId=a,this.searchContentIsLoaded=!1,this.searchContent$=new Se(void 0),this.currentSearchContent$=this.searchContent$.asObservable()}loadSeachContent(){this.searchContentIsLoaded||_(this.platformId)&&(this.http.get("assets/searchContent.json").subscribe(i=>{let a=new R({fields:["q","a","hiddenText","boost"],storeFields:["q","a","l"],searchOptions:{boost:{q:30,boost:50},fuzzy:0,prefix:!0}});for(let o=0;o<i.length;o++)i[o].id=o;a.addAll(i),this.searchContent={searchText:i,miniSearch:a},this.searchContent$.next(this.searchContent)}),this.searchContentIsLoaded=!0)}static{this.\u0275fac=function(a){return new(a||r)(q(Be),q(C))}}static{this.\u0275prov=W({token:r,factory:r.\u0275fac,providedIn:"root"})}}return r})();var wt=["searchInput"];function _t(r,l){if(r&1){let i=b();n(0,"div",5),x("click",function(){f(i);let o=u();return S(o.close())}),t()}}function Ct(r,l){r&1&&(n(0,"h4"),e(1,"Calculator:"),t())}function kt(r,l){if(r&1){let i=b();n(0,"a",20),x("click",function(){f(i);let o=u(2);return S(o.linkClicked())}),e(1),t()}if(r&2){let i=l.$implicit;m("routerLink",i.l),s(),k(i.h)}}function It(r,l){r&1&&(n(0,"h4",15),e(1,`
+      Tutorial:
+    `),t())}function Mt(r,l){if(r&1){let i=b();n(0,"a",25),x("click",function(){f(i);let o=u(3);return S(o.linkClicked())}),e(1),t()}if(r&2){let i=l.$implicit;m("href",i.p,F),s(),k(i.n)}}function At(r,l){if(r&1&&(n(0,"div",21),e(1,`
+      `),c(2,"h1",22),e(3,`
+      `),c(4,"p",23),e(5,`
+      `),d(6,Mt,2,2,"a",24),e(7,`
+    `),t()),r&2){let i=l.$implicit;s(2),m("innerHTML",i.q,de),s(2),m("innerHTML",i.a,de),s(2),m("ngForOf",i.l)}}function Tt(r,l){if(r&1){let i=b();n(0,"div",6),e(1,`
+  `),n(2,"div",7),e(3,`
+    `),n(4,"button",8),x("click",function(){f(i);let o=u();return S(o.close())}),e(5,`
+      `),c(6,"i",9),e(7,`
+    `),t(),e(8,`
+    `),n(9,"div",10),e(10,`
+      `),n(11,"div",11),e(12,`
+        `),n(13,"span",12),e(14," "),c(15,"i",13),e(16," "),t(),e(17,`
+      `),t(),e(18,`
+      `),n(19,"input",14,0),Z("ngModelChange",function(o){f(i);let h=u();return X(h.searchString,o)||(h.searchString=o),S(o)}),x("keyup",function(){f(i);let o=u();return S(o.search())}),t(),e(21,`
+    `),t(),e(22,`
+    `),n(23,"div",15),e(24,`
+      `),d(25,Ct,2,0,"h4",16),e(26,`
+      `),d(27,kt,2,2,"a",17),e(28,`
+    `),t(),e(29,`
+    `),d(30,It,2,0,"h4",18),e(31,`
+    `),d(32,At,8,3,"div",19),e(33,`
+  `),t(),e(34,`
+`),t()}if(r&2){let i=u();s(19),G("ngModel",i.searchString),s(6),m("ngIf",i.methodsResults&&i.methodsResults.length>0),s(2),m("ngForOf",i.methodsResults),s(3),m("ngIf",i.filterdQuestionList&&i.filterdQuestionList.length>0),s(2),m("ngForOf",i.filterdQuestionList)}}var ot=(()=>{class r{constructor(i,a){this.eRef=i,this.miniSearchService=a}ngOnInit(){this.miniSearchService.currentSearchContent$.subscribe(i=>{this.searchContent=i});for(let i=0;i<ie.length;i++)ie[i].id=i;this.miniSearchCalc=new R({fields:["h"],storeFields:["h","l"],searchOptions:{fuzzy:0,prefix:!0}}),this.miniSearchCalc.addAll(ie)}close(){this.showModal=!1,this.searchString=""}show(){this.showModal=!0,this.load(),setTimeout(()=>{this.searchElement.nativeElement.focus()},0)}load(){this.miniSearchService.loadSeachContent()}search(){this.searchContent&&(this.filterdQuestionList=this.searchContent.miniSearch.search(this.searchString).slice(0,10)),this.methodsResults=this.miniSearchCalc.search(this.searchString),this.searchString||(this.methodsResults=[])}onMouseDown(i){this.eRef.nativeElement.contains(i.target)||(this.searchString===""||this.searchString,this.searchString="",this.filterdQuestionList=void 0,this.methodsResults=void 0)}linkClicked(){this.searchString="",this.search(),this.close()}static{this.\u0275fac=function(a){return new(a||r)(g(Me),g(ae))}}static{this.\u0275cmp=v({type:r,selectors:[["app-search"]],viewQuery:function(a,o){if(a&1&&Le(wt,5),a&2){let h;Oe(h=qe())&&(o.searchElement=h.first)}},hostBindings:function(a,o){a&1&&x("mousedown",function(p){return o.onMouseDown(p)},!1,Te)},standalone:!1,decls:9,vars:2,consts:[["searchInput",""],["class","backdrop",3,"click",4,"ngIf"],["type","button",1,"btn","btn-link","pl-0","pr-0","pb-0","mb-0",3,"click"],[1,"bi","bi-search","h5"],["class","cardpopup centered",4,"ngIf"],[1,"backdrop",3,"click"],[1,"cardpopup","centered"],[1,"modal-body","p-4"],["type","button","aria-label","Close",1,"close",3,"click"],[1,"bi","bi-x"],[1,"input-group"],[1,"input-group-prepend"],[1,"input-group-text"],[1,"bi","bi-search"],["type","text","placeholder","What are you searching?",1,"form-control",2,"border-color","#fff","border-bottom-color","#018786","border-radius","0px",3,"ngModelChange","keyup","ngModel"],[1,"mt-4"],[4,"ngIf"],["class","btn btn-primary mb-2 mr-2 btn-sm text-left",3,"routerLink","click",4,"ngFor","ngForOf"],["class","mt-4",4,"ngIf"],["class","mb-2 mt-3",4,"ngFor","ngForOf"],[1,"btn","btn-primary","mb-2","mr-2","btn-sm","text-left",3,"click","routerLink"],[1,"mb-2","mt-3"],[1,"mb-1",2,"font-size","1.2rem",3,"innerHTML"],[1,"mb-2",3,"innerHTML"],["class","btn btn-primary btn-sm mb-2 mr-2 text-left","role","button",3,"href","click",4,"ngFor","ngForOf"],["role","button",1,"btn","btn-primary","btn-sm","mb-2","mr-2","text-left",3,"click","href"]],template:function(a,o){a&1&&(d(0,_t,1,0,"div",1),e(1,`
+`),n(2,"button",2),x("click",function(){return o.show()}),e(3,`
+  `),c(4,"i",3),e(5,`
+`),t(),e(6,`
+
+`),d(7,Tt,35,5,"div",4),e(8,`
+`)),a&2&&(m("ngIf",o.showModal),s(7),m("ngIf",o.showModal))},dependencies:[ee,te,ne,D,M,y],styles:[".form-control[_ngcontent-%COMP%]:focus{border-color:#ccc;-webkit-box-shadow:none;box-shadow:none}.centered[_ngcontent-%COMP%]{width:90%;max-width:850px;position:fixed;top:5%;left:50%;transform:translate(-50%);z-index:100;max-height:90%;overflow-y:auto;min-height:400px}h1[_ngcontent-%COMP%], p[_ngcontent-%COMP%]{color:#000}.input-group-text[_ngcontent-%COMP%]{background-color:#fff;border-color:#fff;border-bottom-color:#018786;border-radius:0;padding-left:0;padding-right:0}"]})}}return r})();function Lt(r,l){if(r&1){let i=b();n(0,"i",9),x("click",function(){f(i);let o=u();return S(o.delete())}),t()}}function Ot(r,l){if(r&1){let i=b();n(0,"a",12),x("click",function(){f(i);let o=u(2);return S(o.linkClicked())}),e(1),t()}if(r&2){let i=l.$implicit;m("href",i.p,F),s(),k(i.n)}}function qt(r,l){if(r&1&&(n(0,"div",10),e(1,`
+  `),e(2,`
+  `),d(3,Ot,2,2,"a",11),e(4,`
+`),t()),r&2){let i=l.$implicit;s(3),m("ngForOf",i.l)}}var lt=(()=>{class r{constructor(i){this.miniSearchService=i}ngOnInit(){this.miniSearchService.loadSeachContent(),this.miniSearchService.currentSearchContent$.subscribe(i=>{this.searchContent=i}),this.miniSearchCalc=new R({fields:["h"],storeFields:["h","l"],searchOptions:{fuzzy:0,prefix:!0}})}search(){this.searchString?this.filterdQuestionList=this.searchContent.miniSearch.search(this.searchString).slice(0,10):this.filterdQuestionList=[]}delete(){this.searchString="",this.filterdQuestionList=[]}linkClicked(){this.searchString="",this.search()}static{this.\u0275fac=function(a){return new(a||r)(g(ae))}}static{this.\u0275cmp=v({type:r,selectors:[["app-search-mobile"]],standalone:!1,decls:22,vars:3,consts:[["searchInput",""],[1,"input-group","d-sm-none","noprint"],[1,"input-group-prepend"],[1,"input-group-text"],[1,"bi","bi-search",2,"color","#018786"],["type","text","placeholder","What are you searching?",1,"form-control",2,"border-color","#fff","border-bottom-color","#018786","border-radius","0px",3,"ngModelChange","keyup","ngModel"],[1,"input-group-append"],["class","bi bi-x-lg",3,"click",4,"ngIf"],["class","mb-1 mt-1",4,"ngFor","ngForOf"],[1,"bi","bi-x-lg",3,"click"],[1,"mb-1","mt-1"],["class","btn btn-primary btn-sm mb-1 mr-2 text-left","role","button",3,"href","click",4,"ngFor","ngForOf"],["role","button",1,"btn","btn-primary","btn-sm","mb-1","mr-2","text-left",3,"click","href"]],template:function(a,o){if(a&1){let h=b();n(0,"div",1),e(1,`
+  `),n(2,"div",2),e(3,`
+    `),n(4,"span",3),c(5,"i",4),e(6,`
+    `),t(),e(7,`
+  `),t(),e(8,`
+  `),n(9,"input",5,0),Z("ngModelChange",function(w){return f(h),X(o.searchString,w)||(o.searchString=w),S(w)}),x("keyup",function(){return f(h),S(o.search())}),t(),e(11,`
+  `),n(12,"div",6),e(13,`
+    `),n(14,"span",3),d(15,Lt,1,0,"i",7),e(16,`
+    `),t(),e(17,`
+  `),t(),e(18,`
+`),t(),e(19,`
+`),d(20,qt,5,1,"div",8),e(21,`
+`)}a&2&&(s(9),G("ngModel",o.searchString),s(6),m("ngIf",o.searchString),s(5),m("ngForOf",o.filterdQuestionList))},dependencies:[ee,te,ne,D,M],styles:[".form-control[_ngcontent-%COMP%]:focus{border-color:#ccc;-webkit-box-shadow:none;box-shadow:none}.input-group-text[_ngcontent-%COMP%]{background-color:#fff;border-color:#fff;border-bottom-color:#018786;border-radius:0;padding-left:0;padding-right:0}"]})}}return r})();function Dt(r,l){if(r&1){let i=b();n(0,"div",5),x("click",function(){f(i);let o=u();return S(o.close())}),t()}}function Nt(r,l){r&1&&(n(0,"sup",6),e(1,"Licence has expired"),t())}function Rt(r,l){r&1&&(n(0,"sup",6)(1,"b",7),e(2,"No Licence"),t()())}function Vt(r,l){if(r&1&&(n(0,"tr"),e(1,`
+          `),n(2,"td"),e(3,"License Valid until"),t(),e(4,`
+
+          `),n(5,"td"),e(6),De(7,"date"),t(),e(8,`
+          `),e(9,`
+        `),t()),r&2){let i=u(2);s(6),k(Ne(7,1,i.user.validTo,"longDate"))}}function Ut(r,l){if(r&1&&(n(0,"td"),e(1),t()),r&2){let i=u(3);s(),k(i.user.validDays)}}function Bt(r,l){r&1&&(n(0,"td"),e(1,"0"),t())}function jt(r,l){if(r&1&&(n(0,"tr"),e(1,`
+          `),n(2,"td"),e(3,"Remaining days"),t(),e(4,`
+          `),d(5,Ut,2,1,"td",14),e(6,`
+          `),d(7,Bt,2,0,"td",14),e(8,`
+        `),t()),r&2){let i=u(2);s(5),m("ngIf",i.user.validDays>0),s(2),m("ngIf",i.user.validDays<=0)}}function Wt(r,l){if(r&1){let i=b();n(0,"a",17),x("click",function(){f(i);let o=u(2);return S(o.close())}),e(1,`
+      Renew access
+    `),t()}}function Ht(r,l){r&1&&(n(0,"p"),e(1,`
+      `),n(2,"b"),e(3,"No valid order"),t(),e(4,` was found. Please check your emails to see if the order was
+      successful.
+    `),t())}function zt(r,l){if(r&1){let i=b();n(0,"button",18),x("click",function(){f(i);let o=u(2);return S(o.close())}),e(1,`
+      Renew now
+    `),t()}}function Kt(r,l){if(r&1){let i=b();n(0,"div",8),e(1,`
+  `),n(2,"div",9),e(3,`
+    `),n(4,"button",10),x("click",function(){f(i);let o=u();return S(o.close())}),e(5,`
+      `),c(6,"i",11),e(7,`
+    `),t(),e(8,`
+    `),c(9,"br"),e(10,`
+
+    `),n(11,"h3",12),e(12,"User data"),t(),e(13,`
+
+    `),n(14,"table",13),e(15,`
+      `),n(16,"tbody"),e(17,`
+        `),n(18,"tr"),e(19,`
+          `),n(20,"td"),e(21,"Mail address"),t(),e(22,`
+          `),n(23,"td"),e(24),t(),e(25,`
+        `),t(),e(26,`
+        `),d(27,Vt,10,4,"tr",14),e(28,`
+        `),d(29,jt,9,2,"tr",14),e(30,`
+      `),t(),e(31,`
+    `),t(),e(32,`
+
+    `),d(33,Wt,2,0,"a",15),e(34,`
+
+    `),d(35,Ht,5,0,"p",14),e(36,`
+
+    `),d(37,zt,2,0,"button",16),e(38,`
+  `),t(),e(39,`
+`),t()}if(r&2){let i=u();s(24),k(i.user.email),s(3),m("ngIf",!i.user.failed&&i.user.validTo),s(2),m("ngIf",!i.user.failed),s(4),m("ngIf",i.user.email==="Activated by Code"),s(2),m("ngIf",i.user.failed),s(2),m("ngIf",i.user.validDays<=10&&i.user.email!=="Activated by Code")}}var mt=(()=>{class r{constructor(i,a){this.userService=i,this.platformId=a}ngOnInit(){_(this.platformId)&&this.userService.user$.subscribe(i=>this.user=i)}close(){this.showModal=!1}show(){this.showModal=!0}static{this.\u0275fac=function(a){return new(a||r)(g(N),g(C))}}static{this.\u0275cmp=v({type:r,selectors:[["app-user-info"]],standalone:!1,decls:13,vars:4,consts:[["class","backdrop",3,"click",4,"ngIf"],["type","button",1,"btn","btn-link","pt-2","pr-2",3,"click"],[1,"bi","bi-person",2,"color","#018786"],["class","ml-1",4,"ngIf"],["class","cardpopup centered",4,"ngIf"],[1,"backdrop",3,"click"],[1,"ml-1"],[2,"color","#870103"],[1,"cardpopup","centered"],[1,"modal-body","p-4"],["type","button","aria-label","Close",1,"close",3,"click"],[1,"bi","bi-x"],[1,"withBar"],[1,"table"],[4,"ngIf"],["routerLink","/premium/code","class","btn btn-primary mt-2","role","button",3,"click",4,"ngIf"],["routerLink","/premium/packages","class","btn btn-primary mt-4","role","button",3,"click",4,"ngIf"],["routerLink","/premium/code","role","button",1,"btn","btn-primary","mt-2",3,"click"],["routerLink","/premium/packages","role","button",1,"btn","btn-primary","mt-4",3,"click"]],template:function(a,o){a&1&&(d(0,Dt,1,0,"div",0),e(1,`
+`),n(2,"button",1),x("click",function(){return o.show()}),e(3,`
+  `),c(4,"i",2),e(5,`
+  `),d(6,Nt,2,0,"sup",3),e(7,`
+  `),d(8,Rt,3,0,"sup",3),e(9,`
+`),t(),e(10,`
+
+`),d(11,Kt,40,6,"div",4),e(12,`
+`)),a&2&&(m("ngIf",o.showModal),s(6),m("ngIf",!o.user.failed&&o.user.validDays<=0),s(2),m("ngIf",o.user.failed),s(3),m("ngIf",o.showModal))},dependencies:[M,y,Ue],styles:[".form-control[_ngcontent-%COMP%]:focus{border-color:#ccc;-webkit-box-shadow:none;box-shadow:none}.centered[_ngcontent-%COMP%]{width:90%;max-width:450px;position:fixed;top:5%;left:50%;transform:translate(-50%);z-index:100;max-height:90%;overflow-y:auto}td[_ngcontent-%COMP%]{border-top:none}"]})}}return r})();var $t=r=>({show:r}),Jt=()=>["active"],Yt=r=>[r];function Gt(r,l){if(r&1){let i=b();n(0,"a",19),x("click",function(){f(i);let o=u(2);return S(o.showLinks=!1)}),e(1,`
+          `),n(2,"span"),e(3),t(),e(4,`
+        `),t()}if(r&2){let i=u().$implicit;m("routerLinkActive",Fe(3,Jt))("routerLink",ue(4,Yt,i.link)),s(3),k(i.name)}}function Xt(r,l){if(r&1&&(n(0,"a",20),e(1,`
+          `),n(2,"span"),e(3),t(),e(4,`
+        `),t()),r&2){let i=u().$implicit;m("href",i.link,F),s(3),Y("",i.name," ")}}function Zt(r,l){if(r&1&&(n(0,"li",10),e(1,`
+        `),d(2,Gt,5,6,"a",17),e(3,`
+        `),d(4,Xt,5,2,"a",18),e(5,`
+      `),t()),r&2){let i=l.$implicit,a=u();s(2),m("ngIf",!i.out),s(2),m("ngIf",i.out&&!a.hideUmfrage)}}function en(r,l){r&1&&(n(0,"li",10),e(1,`
+          `),c(2,"app-user-info"),e(3,`
+        `),t())}function tn(r,l){if(r&1){let i=b();n(0,"li",10),e(1,`
+          `),n(2,"a",21),x("click",function(){f(i);let o=u();return S(o.goToLogout())}),e(3,"Logout"),t(),e(4,`
+        `),t()}}function nn(r,l){if(r&1){let i=b();n(0,"li",10),e(1,`
+          `),n(2,"a",22),x("click",function(){f(i);let o=u();return S(o.goToLogin())}),e(3,"Login"),t(),e(4,`
+        `),t()}}function rn(r,l){if(r&1){let i=b();n(0,"li",10),e(1,`
+          `),n(2,"a",23),x("click",function(){f(i);let o=u();return S(o.promptInstall())}),e(3,`
+            Install
+          `),t(),e(4,`
+        `),t()}}var ct=(()=>{class r{constructor(i,a){this.userService=i,this.platformId=a,this.showLinks=!1,this.canBeInstalled=!1,this.hideUmfrage=!1,this.linkNameList=[{link:"statistics-calculator",name:"Statistics Calculator"},{link:"https://numiqo.com/survey/",name:"Survey",out:!0},{link:"tutorial",name:"Tutorial"},{link:"statistics-book",name:"Book"},{link:"premium",name:"Pricing"}],this.lang=E.lang}ngOnInit(){_(this.platformId)&&this.userService.user$.subscribe(i=>{this.user=i,this.hideUmfrage=i?.umfrage_deaktivieren})}onbeforeinstallprompt(i){i.preventDefault(),this.installEvent=i,this.canBeInstalled=!0}goToLogin(){let i=window.location.pathname;window.location.href="/shop/login/?redirect="+i}goToLogout(){localStorage.removeItem("Code");let i=window.location.pathname;window.location.href="/shop/logout/?redirect="+i}promptInstall(){this.installEvent?(this.installEvent.prompt(),this.installEvent.userChoice.then(i=>{i.outcome==="accepted"?console.log("User accepted the A2HS prompt"):console.log("User dismissed the A2HS prompt"),this.installEvent=null})):this.canBeInstalled=!1}static{this.\u0275fac=function(a){return new(a||r)(g(N),g(C))}}static{this.\u0275cmp=v({type:r,selectors:[["app-navmenu"]],hostBindings:function(a,o){a&1&&x("beforeinstallprompt",function(p){return o.onbeforeinstallprompt(p)},!1,H)},standalone:!1,decls:63,vars:8,consts:[[1,"navbar","navbar-expand-sm","noprint"],["routerLink","",1,"navbar-brand","ml-0",2,"margin-right","18px"],["alt","numiqo","src","../../assets/numiqo.svg","title","numiqo",1,"img-clean","logo-shift"],["aria-controls","navbarSupportedContent","type","button",1,"navbar-toggler","pb-0","noprint",3,"click"],[1,"bi","bi-list",2,"color","#018786"],[1,"collapse","navbar-collapse",2,"margin-top","17px",3,"ngClass"],[1,"navbar-nav","mr-auto"],["class","nav-item",4,"ngFor","ngForOf"],[1,"navbar-header","pull-right"],["class","nav-item",4,"ngIf"],[1,"nav-item"],[1,"nav-link","dropdown"],[1,"dropdown-content"],["href","https://numiqo.de/",1,"hoverHand"],["href","https://numiqo.es/",1,"hoverHand"],["href","https://numiqo.fr/",1,"hoverHand"],[1,"ml-3","mr-0","d-none","d-sm-block"],["class","nav-link","style","font-size: 1.2em !important",3,"routerLinkActive","routerLink","click",4,"ngIf"],["class","nav-link","style","font-size: 1.2em !important",3,"href",4,"ngIf"],[1,"nav-link",2,"font-size","1.2em !important",3,"click","routerLinkActive","routerLink"],[1,"nav-link",2,"font-size","1.2em !important",3,"href"],["routerLink","/",1,"nav-link","hoverHand",3,"click"],[1,"nav-link","hoverHand",3,"click"],[1,"nav-link","hoverHand","install-button",3,"click"]],template:function(a,o){a&1&&(n(0,"nav",0),e(1,`
+  `),n(2,"a",1),e(3,`
+    `),c(4,"img",2),e(5,`
+  `),t(),e(6,`
+
+  `),n(7,"button",3),x("click",function(){return o.showLinks=!o.showLinks}),e(8,`
+    `),c(9,"i",4),e(10,`
+  `),t(),e(11,`
+
+  `),n(12,"div",5),e(13,`
+    `),n(14,"ul",6),e(15,`
+      `),d(16,Zt,6,2,"li",7),e(17,`
+    `),t(),e(18,`
+
+    `),n(19,"div",8),e(20,`
+      `),n(21,"ul",6),e(22,`
+        `),d(23,en,4,0,"li",9),e(24,`
+
+        `),d(25,tn,5,0,"li",9),e(26,`
+        `),d(27,nn,5,0,"li",9),e(28,`
+
+        `),n(29,"li",10),e(30,`
+          `),n(31,"div",11),e(32,`
+            `),n(33,"span"),e(34,"EN"),t(),e(35,`
+            `),n(36,"div",12),e(37,`
+              `),n(38,"a",13),e(39,"DE"),t(),e(40,`
+              `),n(41,"a",14),e(42,"ES"),t(),e(43,`
+              `),n(44,"a",15),e(45,"FR"),t(),e(46,`
+            `),t(),e(47,`
+          `),t(),e(48,`
+        `),t(),e(49,`
+
+        `),d(50,rn,5,0,"li",9),e(51,`
+
+        `),n(52,"li",16),e(53,`
+          `),c(54,"app-search"),e(55,`
+        `),t(),e(56,`
+      `),t(),e(57,`
+    `),t(),e(58,`
+  `),t(),e(59,`
+`),t(),e(60,`
+`),c(61,"app-search-mobile"),e(62,`
+`)),a&2&&(s(12),m("ngClass",ue(6,$t,o.showLinks)),s(4),m("ngForOf",o.linkNameList),s(7),m("ngIf",o.user==null?null:o.user.is_user_logged_in),s(2),m("ngIf",o.user==null?null:o.user.is_user_logged_in),s(2),m("ngIf",!(o.user!=null&&o.user.is_user_logged_in)),s(23),m("ngIf",o.canBeInstalled))},dependencies:[Ve,D,M,y,Ge,ot,lt,mt],styles:["span[_ngcontent-%COMP%]{color:#018786}a.active[_ngcontent-%COMP%]   span[_ngcontent-%COMP%]{border-bottom:2px solid rgba(1,135,134,.3)}.navbar-toggler[_ngcontent-%COMP%]{padding-right:0}.navbar[_ngcontent-%COMP%]{padding-top:32px}@media all and (display-mode: standalone){.install-button[_ngcontent-%COMP%]{display:none}}"]})}}return r})();var dt=(()=>{class r{constructor(i,a,o,h,p){this.router=i,this.userService=a,this.printService=o,this.platformId=h,this.dom=p,this.showBottom=!0,this.year=new Date().getFullYear()}ngOnInit(){this.router.events.subscribe(i=>{if(i instanceof $e){let a=decodeURIComponent(i.urlAfterRedirects).split("#")[0].split("?")[0];this.createCanonicalURL("https://numiqo.com"+a),_(this.platformId)&&!localStorage.getItem("startPage")&&localStorage.setItem("startPage",this.router.url)}}),_(this.platformId)&&(this.userService.getUser(),localStorage.getItem("colorway")?E.colorway=JSON.parse(localStorage.getItem("colorway")):E.colorway=JSON.parse(JSON.stringify(E.defaultColorway)),localStorage.getItem("tableAndFigStyle")?(E.tableAndFigStyle=JSON.parse(localStorage.getItem("tableAndFigStyle")),E.tableAndFigStyle.fontFamily||(E.tableAndFigStyle.fontFamily="Arial"),E.tableAndFigStyle.fontSize||(E.tableAndFigStyle.fontSize=11),E.tableAndFigStyle.fontSizeFig||(E.tableAndFigStyle.fontSizeFig=13),E.tableAndFigStyle.headingInFig||(E.tableAndFigStyle.headingInFig=!0)):E.tableAndFigStyle=JSON.parse(JSON.stringify(E.defaultTableAndFigStyle)))}createCanonicalURL(i){let a=this.dom.querySelector('[rel="canonical"]');a||(a=this.dom.createElement("link"),a.setAttribute("rel","canonical")),a.setAttribute("href",i),this.dom.head.appendChild(a)}onBeforePrint(){this.printService.beforePrint()}onAfterPrint(){this.printService.afterPrint()}static{this.\u0275fac=function(a){return new(a||r)(g(Ye),g(N),g(Ze),g(C),g(Re))}}static{this.\u0275cmp=v({type:r,selectors:[["app-root"]],hostBindings:function(a,o){a&1&&x("beforeprint",function(p){return o.onBeforePrint(p)},!1,H)("afterprint",function(p){return o.onAfterPrint(p)},!1,H)},standalone:!1,decls:63,vars:1,consts:[[1,"mb-0","noprint"],[1,"noprint","mt-1","mb-5","pt-3",2,"border-top","2px solid #018786"],["href","https://www.youtube.com/@numiqo","target","_blank",2,"padding-left","4px !important"],[1,"bi","bi-youtube",2,"font-size","2.2rem"],["href","https://www.linkedin.com/company/numiqo","target","_blank",2,"padding-left","0px !important"],[1,"bi","bi-linkedin","ml-1",2,"font-size","2.2rem"],["routerLink","/contact",1,"nav-link","mt-3"],["routerLink","/about-us",1,"nav-link"],["routerLink","/privacy",1,"nav-link",2,"padding-left","0px !important"],["routerLink","/statistics-software",1,"nav-link",2,"padding-left","0px !important"],["routerLink","/minitab-alternative",1,"nav-link",2,"padding-left","0px !important"],["routerLink","/spss-alternative",1,"nav-link",2,"padding-left","0px !important"],["routerLink","/rebranding-to-numico",1,"nav-link",2,"padding-left","0px !important"]],template:function(a,o){a&1&&(c(0,"app-navmenu"),e(1,`
+
+`),e(2,`
+`),c(3,"router-outlet"),e(4,`
+
+`),n(5,"p",0),e(6),t(),e(7,`
+
+`),n(8,"div",1),e(9,`
+  `),n(10,"a",2),e(11,`
+    `),c(12,"i",3),e(13,`
+  `),t(),e(14,`
+  `),n(15,"a",4),e(16,`
+    `),c(17,"i",5),e(18,`
+  `),t(),e(19,`
+
+  `),n(20,"a",6),e(21,`
+    `),n(22,"span"),e(23,"Contact & Support"),t(),e(24,`
+  `),t(),e(25,`
+
+  `),n(26,"a",7),e(27,`
+    `),n(28,"span"),e(29,"FAQ & About Us"),t(),e(30,`
+  `),t(),e(31,`
+
+  `),n(32,"a",8),e(33,`
+    `),n(34,"span"),e(35,"Privacy Policy"),t(),e(36,`
+  `),t(),e(37,`
+  `),n(38,"a",9),e(39,`
+    `),n(40,"span"),e(41,"Statistics Software"),t(),e(42,`
+  `),t(),e(43,`
+
+  `),n(44,"a",10),e(45,`
+    `),n(46,"span"),e(47,"Minitab alternative"),t(),e(48,`
+  `),t(),e(49,`
+  `),n(50,"a",11),e(51,`
+    `),n(52,"span"),e(53,"SPSS alternative"),t(),e(54,`
+  `),t(),e(55,`
+
+  `),n(56,"a",12),e(57,`
+    `),n(58,"span"),e(59,"DATAtab is now numiqo"),t(),e(60,`
+  `),t(),e(61,`
+`),t(),e(62,`
+`)),a&2&&(s(6),Y(`
+  Cite numiqo: numiqo Team (`,o.year,`). numiqo: Online Statistics Calculator. numiqo e.U.
+  Graz, Austria. URL https://numiqo.com
+`))},dependencies:[Je,y,ct],styles:[".nav-link[_ngcontent-%COMP%]{padding-left:0!important;padding-bottom:0;padding-top:2px}"]})}}return r})();var K="Service workers are disabled or not supported by this browser";function on(r){return se(()=>be(new Error(r)))}var V=class{serviceWorker;worker;registration;events;constructor(l){if(this.serviceWorker=l,!l)this.worker=this.events=this.registration=on(K);else{let a=me(l,"controllerchange").pipe(T(()=>l.controller)),o=se(()=>Q(l.controller)),h=Ee(o,a);this.worker=h.pipe(B(L=>!!L)),this.registration=this.worker.pipe(j(()=>l.getRegistration()));let U=me(l,"message").pipe(T(L=>L.data)).pipe(B(L=>L&&L.type)).pipe(ye());U.connect(),this.events=U}}postMessage(l,i){return this.worker.pipe(P(1),we(a=>{a.postMessage(he({action:l},i))})).toPromise().then(()=>{})}postMessageWithOperation(l,i,a){let o=this.waitForOperationCompleted(a),h=this.postMessage(l,i);return Promise.all([h,o]).then(([,p])=>p)}generateNonce(){return Math.round(Math.random()*1e7)}eventsOfType(l){let i;return typeof l=="string"?i=a=>a.type===l:i=a=>l.includes(a.type),this.events.pipe(B(i))}nextEventOfType(l){return this.eventsOfType(l).pipe(P(1))}waitForOperationCompleted(l){return this.eventsOfType("OPERATION_COMPLETED").pipe(B(i=>i.nonce===l),P(1),T(i=>{if(i.result!==void 0)return i.result;throw new Error(i.error)})).toPromise()}get isEnabled(){return!!this.serviceWorker}},xt=(()=>{class r{sw;messages;notificationClicks;subscription;get isEnabled(){return this.sw.isEnabled}pushManager=null;subscriptionChanges=new fe;constructor(i){if(this.sw=i,!i.isEnabled){this.messages=O,this.notificationClicks=O,this.subscription=O;return}this.messages=this.sw.eventsOfType("PUSH").pipe(T(o=>o.data)),this.notificationClicks=this.sw.eventsOfType("NOTIFICATION_CLICK").pipe(T(o=>o.data)),this.pushManager=this.sw.registration.pipe(T(o=>o.pushManager));let a=this.pushManager.pipe(j(o=>o.getSubscription()));this.subscription=ce(a,this.subscriptionChanges)}requestSubscription(i){if(!this.sw.isEnabled||this.pushManager===null)return Promise.reject(new Error(K));let a={userVisibleOnly:!0},o=this.decodeBase64(i.serverPublicKey.replace(/_/g,"/").replace(/-/g,"+")),h=new Uint8Array(new ArrayBuffer(o.length));for(let p=0;p<o.length;p++)h[p]=o.charCodeAt(p);return a.applicationServerKey=h,this.pushManager.pipe(j(p=>p.subscribe(a)),P(1)).toPromise().then(p=>(this.subscriptionChanges.next(p),p))}unsubscribe(){if(!this.sw.isEnabled)return Promise.reject(new Error(K));let i=a=>{if(a===null)throw new Error("Not subscribed to push notifications.");return a.unsubscribe().then(o=>{if(!o)throw new Error("Unsubscribe failed!");this.subscriptionChanges.next(null)})};return this.subscription.pipe(P(1),j(i)).toPromise()}decodeBase64(i){return atob(i)}static \u0275fac=function(a){return new(a||r)(q(V))};static \u0275prov=W({token:r,factory:r.\u0275fac})}return r})(),ht=(()=>{class r{sw;versionUpdates;unrecoverable;get isEnabled(){return this.sw.isEnabled}constructor(i){if(this.sw=i,!i.isEnabled){this.versionUpdates=O,this.unrecoverable=O;return}this.versionUpdates=this.sw.eventsOfType(["VERSION_DETECTED","VERSION_INSTALLATION_FAILED","VERSION_READY","NO_NEW_VERSION_DETECTED"]),this.unrecoverable=this.sw.eventsOfType("UNRECOVERABLE_STATE")}checkForUpdate(){if(!this.sw.isEnabled)return Promise.reject(new Error(K));let i=this.sw.generateNonce();return this.sw.postMessageWithOperation("CHECK_FOR_UPDATES",{nonce:i},i)}activateUpdate(){if(!this.sw.isEnabled)return Promise.reject(new Error(K));let i=this.sw.generateNonce();return this.sw.postMessageWithOperation("ACTIVATE_UPDATE",{nonce:i},i)}static \u0275fac=function(a){return new(a||r)(q(V))};static \u0275prov=W({token:r,factory:r.\u0275fac})}return r})();var pt=new _e("");function ln(r,l,i,a){return()=>{if(!(_(a)&&"serviceWorker"in navigator&&i.enabled!==!1))return;let o=r.get(Ie),h=r.get(pe);o.runOutsideAngular(()=>{let w=navigator.serviceWorker,A=()=>w.controller?.postMessage({action:"INITIALIZE"});w.addEventListener("controllerchange",A),h.onDestroy(()=>{w.removeEventListener("controllerchange",A)})});let p;if(typeof i.registrationStrategy=="function")p=i.registrationStrategy();else{let[w,...A]=(i.registrationStrategy||"registerWhenStable:30000").split(":");switch(w){case"registerImmediately":p=Q(null);break;case"registerWithDelay":p=ut(+A[0]||0);break;case"registerWhenStable":let U=ge(r.get(pe).whenStable());p=A[0]?ce(U,ut(+A[0])):U;break;default:throw new Error(`Unknown ServiceWorker registration strategy: ${i.registrationStrategy}`)}}o.runOutsideAngular(()=>p.pipe(P(1)).subscribe(()=>navigator.serviceWorker.register(l,{scope:i.scope}).catch(w=>console.error("Service worker registration failed with:",w))))}}function ut(r){return Q(null).pipe(ve(r))}function sn(r,l){return new V(_(l)&&r.enabled!==!1?navigator.serviceWorker:void 0)}var z=class{enabled;scope;registrationStrategy};function mn(r,l={}){return Ce([xt,ht,{provide:pt,useValue:r},{provide:z,useValue:l},{provide:V,useFactory:sn,deps:[z,C]},{provide:Pe,useFactory:ln,deps:[ke,pt,z,C],multi:!0}])}var ft=(()=>{class r{static register(i,a={}){return{ngModule:r,providers:[mn(i,a)]}}static \u0275fac=function(a){return new(a||r)};static \u0275mod=J({type:r});static \u0275inj=$({providers:[xt,ht]})}return r})();var le={production:!0};var St=(()=>{class r{constructor(i){this.scrollService=i}ngOnInit(){this.scrollService.top()}static{this.\u0275fac=function(a){return new(a||r)(g(rt))}}static{this.\u0275cmp=v({type:r,selectors:[["app-minitab"]],standalone:!1,decls:479,vars:0,consts:[[1,"center800","mb-5","mt-5"],[1,"mb-0"],[1,"mb-3","mt-2"],["routerLink","/statistics-calculator/descriptive-statistics","alt","Minitab Alternative","title","Minitab Alternative","src","assets/tutorial/Minitab_Alternative.png",1,"img-clean","zoom","hoverHand","shadow","mb-3","mt-3"],["routerLink","/statistics-calculator/hypothesis-test"],["routerLink","/statistics-calculator/measurement-systems-analysis"],["routerLink","/statistics-calculator/process-capability"],["routerLink","/statistics-calculator/statistical-process-control"],["routerLink","/statistics-calculator/design-of-experiments"],[1,"table","result-table",2,"font-size","18px"],["alt","Selected customers","title","Selected customers","src","assets/tutorial/Selected_customers.png"],[1,"mt-5"],[1,"result-table"],["href","https://www.minitab.com"],["href","https://www.ibm.com/products/spss-statistics"],["href","https://www.sas.com/"],["href","https://www.jmp.com/"],["href","https://www.r-project.org/"],["href","https://www.rstudio.com/"],["href","https://www.xlstat.com/"],["href","https://www.sigmaxl.com/"]],template:function(a,o){a&1&&(n(0,"article",0),e(1,`
+  `),n(2,"h1",1),e(3,`
+    Minitab Alternative
+    `),e(4,`
+  `),t(),e(5,`
+  `),n(6,"h2",2),e(7,"A cost-effective and easy-to-use alternative to Minitab"),t(),e(8,`
+
+  `),c(9,"img",3),e(10,`
+  `),n(11,"p"),e(12,`
+    Minitab is one of the most popular tools for statistical analysis and Six Sigma
+    projects. However, many organisations find it too expensive and complex for their
+    day-to-day needs.
+  `),t(),e(13,`
+  `),n(14,"p"),e(15,`
+    If you are looking for a Minitab alternative that is intuitive, covers the most
+    important statistical methods for quality and process improvement, and significantly
+    more affordable than Minitab, then numiqo is the ideal choice.
+  `),t(),e(16,`
+  `),n(17,"h2"),e(18,"Why Choose numiqo as a Minitab Alternative?"),t(),e(19,`
+  `),n(20,"p"),e(21,`
+    numiqo is an intuitive statistics software for professionals, engineers and
+    researchers who need robust analytics without a steep learning curve. It provides all
+    essential features for quality control, Six Sigma and data analysis, making it a
+    strong competitor to traditional Minitab statistical software.
+  `),t(),e(22,`
+
+  `),n(23,"h2"),e(24,"Key Features of numiqo"),t(),e(25,`
+  `),n(26,"p"),e(27,`
+    With numiqo you can perform the core analyses that many users rely on Minitab for \u2013
+    from hypothesis tests to designed experiments. Here is an overview of the most
+    important features:
+  `),t(),e(28,`
+  `),n(29,"h3"),e(30,`
+    `),n(31,"a",4),e(32,"1. Hypothesis Testing"),t(),e(33,`
+  `),t(),e(34,`
+  `),n(35,"ul"),e(36,`
+    `),n(37,"li"),e(38,"T-tests (One-sample, Two-sample, Paired)"),t(),e(39,`
+    `),n(40,"li"),e(41,"ANOVA (One-way, Two-way)"),t(),e(42,`
+    `),n(43,"li"),e(44,"Chi-square tests"),t(),e(45,`
+    `),n(46,"li"),e(47,"Non-parametric tests (Mann-Whitney, Kruskal-Wallis)"),t(),e(48,`
+  `),t(),e(49,`
+  `),n(50,"p"),e(51,`
+    Use these tests to compare means, proportions or distributions and quickly see whether
+    differences in your process are statistically significant \u2013 just like in Minitab, but
+    in a simpler interface.
+  `),t(),e(52,`
+  `),n(53,"h3"),e(54,`
+    `),n(55,"a",5),e(56,"2. Measurement System Analysis (MSA)"),t(),e(57,`
+  `),t(),e(58,`
+  `),n(59,"ul"),e(60,`
+    `),n(61,"li"),e(62,"Gage R&R studies"),t(),e(63,`
+    `),n(64,"li"),e(65,"Precision and accuracy assessment"),t(),e(66,`
+    `),n(67,"li"),e(68,"Repeatability and reproducibility"),t(),e(69,`
+  `),t(),e(70,`
+  `),n(71,"p"),e(72,`
+    Evaluate whether your measurement system is reliable enough to base decisions on \u2013 a
+    must-have for quality engineers and Six Sigma projects.
+  `),t(),e(73,`
+  `),n(74,"h3"),e(75,`
+    `),n(76,"a",6),e(77,"3. Process Capability Analysis"),t(),e(78,`
+  `),t(),e(79,`
+  `),n(80,"ul"),e(81,`
+    `),n(82,"li"),e(83,"Cp, Cpk, Pp, Ppk calculations"),t(),e(84,`
+    `),n(85,"li"),e(86,"Capability analysis for normal and non-normal data"),t(),e(87,`
+    `),n(88,"li"),e(89,"Histogram and probability plots"),t(),e(90,`
+  `),t(),e(91,`
+  `),n(92,"p"),e(93,`
+    Evaluate how well your process meets specification limits using common capability
+    indices such as Cp, Cpk, Pp and Ppk. These metrics show at a glance whether your
+    process is capable of consistently staying within the required tolerances.
+  `),t(),e(94,`
+  `),n(95,"h3"),e(96,`
+    `),n(97,"a",7),e(98,"4. Statistical Process Control (SPC)"),t(),e(99,`
+  `),t(),e(100,`
+  `),n(101,"ul"),e(102,`
+    `),n(103,"li"),e(104,"Control charts (X-bar, R, S, I-MR, p, np, c, u charts)"),t(),e(105,`
+    `),n(106,"li"),e(107,"Process monitoring and trend analysis"),t(),e(108,`
+    `),n(109,"li"),e(110,"Out-of-control detection"),t(),e(111,`
+  `),t(),e(112,`
+  `),n(113,"p"),e(114,`
+    Monitor your processes in real time with control charts. SPC helps you detect
+    out-of-control situations early, so you can act before defects, downtime or customer
+    complaints occur.
+  `),t(),e(115,`
+  `),n(116,"h3"),e(117,`
+    `),n(118,"a",8),e(119,"5. Design of Experiments (DoE)"),t(),e(120,`
+  `),t(),e(121,`
+  `),n(122,"ul"),e(123,`
+    `),n(124,"li"),e(125,"Full factorial design"),t(),e(126,`
+    `),n(127,"li"),e(128,"Fractional factorial design"),t(),e(129,`
+    `),n(130,"li"),e(131,"Plackett-Burman design"),t(),e(132,`
+    `),n(133,"li"),e(134,"Box-Behnken design"),t(),e(135,`
+    `),n(136,"li"),e(137,"Central Composite design"),t(),e(138,`
+    `),n(139,"li"),e(140,"Analyse Design"),t(),e(141,`
+  `),t(),e(142,`
+  `),n(143,"p"),e(144,`
+    Use Design of Experiments to identify the most important factors and their
+    interactions with a minimal number of trials. DoE helps you quickly find optimal
+    settings for your process or product, saving time and resources while improving
+    performance.
+  `),t(),e(145,`
+
+  `),n(146,"h2"),e(147,"Fair pricing"),t(),e(148,`
+
+  `),n(149,"p"),e(150,`
+    One of the biggest advantages of numiqo over Minitab is its
+    `),n(151,"b"),e(152,"affordable pricing"),t(),e(153,`. Unlike other expensive statistical software, numiqo offers
+    a cost-effective solution for businesses of all sizes.
+  `),t(),e(154,`
+
+  `),n(155,"p"),e(156,`
+    One of the biggest advantages of numiqo over Minitab is its and affordable pricing.
+    While Minitab licenses often cost well over a thousand euros per year, numiqo offers a
+    powerful alternative starting at just \u20AC289 per year.
+  `),t(),e(157,`
+
+  `),n(158,"table",9),e(159,`
+    `),n(160,"thead"),e(161,`
+      `),n(162,"tr"),e(163,`
+        `),c(164,"th"),e(165,`
+        `),n(166,"th"),e(167,"Net price per year"),t(),e(168,`
+      `),t(),e(169,`
+    `),t(),e(170,`
+    `),n(171,"tbody"),e(172,`
+      `),n(173,"tr"),e(174,`
+        `),n(175,"th"),e(176,"Single license"),t(),e(177,`
+        `),n(178,"td"),e(179,"\u20AC 289"),t(),e(180,`
+      `),t(),e(181,`
+
+      `),n(182,"tr"),e(183,`
+        `),n(184,"th")(185,"b"),e(186,"Flat* Small to medium enterprises"),t()(),e(187,`
+        `),n(188,"td")(189,"b"),e(190,"\u20AC 2299"),t()(),e(191,`
+      `),t(),e(192,`
+      `),n(193,"tr"),e(194,`
+        `),n(195,"th")(196,"b"),e(197,"Flat* Large enterprises "),t()(),e(198,`
+        `),n(199,"td")(200,"b"),e(201,"\u20AC 3499"),t()(),e(202,`
+      `),t(),e(203,`
+    `),t(),e(204,`
+  `),t(),e(205,`
+
+  `),n(206,"h4"),e(207,"Business Flat Pricing"),t(),e(208,`
+  `),n(209,"p"),e(210,`
+    With the business flat, every employee in your organisation can access numiqo \u2013
+    without extra per-user fees. This makes numiqo a budget-friendly alternative to
+    traditional Six Sigma software. More than 25 customers already rely on numiqo.
+  `),t(),e(211,`
+
+  `),n(212,"p"),e(213,`
+    Small and medium-sized companies pay \u20AC2,299 per year, large companies \u20AC3,499 \u2013 for
+    unlimited access for all employees, regardless of how many actually use numiqo.
+  `),t(),e(214,`
+
+  `),n(215,"h5"),e(216,"Selected Customers"),t(),e(217,`
+  `),c(218,"img",10),e(219,`
+
+  `),n(220,"h2"),e(221,"Benefits of Using numiqo"),t(),e(222,`
+  `),n(223,"ul"),e(224,`
+    `),n(225,"li"),e(226,`
+      `),n(227,"b"),e(228,"Ease of Use"),t(),e(229,`: Clean, intuitive user interface \u2013 no advanced statistics degree
+      required.
+    `),t(),e(230,`
+    `),n(231,"li"),e(232,`
+      `),n(233,"b"),e(234,"Web-Based Access"),t(),e(235,`: Runs in your browser, no installation or IT support needed.
+    `),t(),e(236,`
+    `),n(237,"li"),e(238,`
+      `),n(239,"b"),e(240,"Privacy guaranteed"),t(),e(241,`: All calculations are performed in your browser, not on
+      external servers.
+    `),t(),e(242,`
+    `),n(243,"li"),e(244,`
+      `),n(245,"b"),e(246,"Cost-Effective"),t(),e(247,`: Significantly more affordable than traditional Six Sigma
+      software such as Minitab.
+    `),t(),e(248,`
+    `),n(249,"li"),e(250,`
+      `),n(251,"b"),e(252,"Comprehensive Analysis"),t(),e(253,`: Covers the key statistical methods required for
+      quality and process improvement projects.
+    `),t(),e(254,`
+  `),t(),e(255,`
+
+  `),n(256,"h4",11),e(257,"numiqo vs. Minitab"),t(),e(258,`
+  `),n(259,"p"),e(260,`
+    The table below summarises how numiqo compares to Minitab for typical quality and Six
+    Sigma tasks:
+  `),t(),e(261,`
+  `),n(262,"table",12),e(263,`
+    `),n(264,"thead"),e(265,`
+      `),n(266,"tr"),e(267,`
+        `),c(268,"th"),e(269,`
+        `),n(270,"th"),e(271,"numiqo"),t(),e(272,`
+        `),n(273,"th"),e(274,"Minitab"),t(),e(275,`
+      `),t(),e(276,`
+    `),t(),e(277,`
+    `),n(278,"tbody"),e(279,`
+      `),n(280,"tr"),e(281,`
+        `),n(282,"th"),e(283,"Descriptive Statistics"),t(),e(284,`
+        `),n(285,"td"),e(286,"\u2705"),t(),e(287,`
+        `),n(288,"td"),e(289,"\u2705"),t(),e(290,`
+      `),t(),e(291,`
+      `),n(292,"tr"),e(293,`
+        `),n(294,"th"),e(295,"Hypothesis Tests"),t(),e(296,`
+        `),n(297,"td"),e(298,"\u2705"),t(),e(299,`
+        `),n(300,"td"),e(301,"\u2705"),t(),e(302,`
+      `),t(),e(303,`
+      `),n(304,"tr"),e(305,`
+        `),n(306,"th"),e(307,"Measurement System Analysis"),t(),e(308,`
+        `),n(309,"td"),e(310,"\u2705"),t(),e(311,`
+        `),n(312,"td"),e(313,"\u2705"),t(),e(314,`
+      `),t(),e(315,`
+      `),n(316,"tr"),e(317,`
+        `),n(318,"th"),e(319,"Process Capability Analysis"),t(),e(320,`
+        `),n(321,"td"),e(322,"\u2705"),t(),e(323,`
+        `),n(324,"td"),e(325,"\u2705"),t(),e(326,`
+      `),t(),e(327,`
+      `),n(328,"tr"),e(329,`
+        `),n(330,"th"),e(331,"Statistical Process Control (SPC)"),t(),e(332,`
+        `),n(333,"td"),e(334,"\u2705"),t(),e(335,`
+        `),n(336,"td"),e(337,"\u2705"),t(),e(338,`
+      `),t(),e(339,`
+      `),n(340,"tr"),e(341,`
+        `),n(342,"th"),e(343,"Design of Experiments (DoE)"),t(),e(344,`
+        `),n(345,"td"),e(346,"\u2705"),t(),e(347,`
+        `),n(348,"td"),e(349,"\u2705"),t(),e(350,`
+      `),t(),e(351,`
+      `),n(352,"tr"),e(353,`
+        `),n(354,"th"),e(355,"Automation & Scripting"),t(),e(356,`
+        `),n(357,"td"),e(358,"\u274C"),t(),e(359,`
+        `),n(360,"td"),e(361,"\u2705"),t(),e(362,`
+      `),t(),e(363,`
+      `),e(364,`
+    `),t(),e(365,`
+  `),t(),e(366,`
+
+  `),n(367,"h2"),e(368,"Data Security"),t(),e(369,`
+  `),n(370,"p"),e(371,`
+    numiqo is designed so that all calculations are performed directly in your web browser
+    - that is, on your own computer - and not on an external server. This means your data
+    is never uploaded to our servers.
+  `),t(),e(372,`
+  `),n(373,"p"),e(374,`
+    This approach reduces compliance concerns and makes numiqo particularly attractive for
+    organisations with strict data protection or confidentiality requirements.
+  `),t(),e(375,`
+
+  `),n(376,"h2"),e(377,"Other Alternatives"),t(),e(378,`
+  `),n(379,"p"),e(380,`
+    Of course, there are other high-quality alternatives to
+    `),n(381,"a",13),e(382,"Minitab"),t(),e(383,`.
+  `),t(),e(384,`
+  `),n(385,"ul"),e(386,`
+    `),n(387,"li"),e(388,`
+      `),n(389,"strong")(390,"a",14),e(391,"IBM SPSS Statistics"),t()(),e(392,`: Comprehensive data management and analysis features, widely used in social and
+      market research.
+    `),t(),e(393,`
+    `),n(394,"li"),e(395,`
+      `),n(396,"strong")(397,"a",15),e(398,"SAS"),t()(),e(399,`: Powerful platform for large datasets with a broad range of statistical procedures
+      and data mining tools.
+    `),t(),e(400,`
+    `),n(401,"li"),e(402,`
+      `),n(403,"strong")(404,"a",16),e(405,"JMP (SAS)"),t()(),e(406,`: Intuitive interface for exploratory data analysis and visualisation, ideal for
+      engineers and scientists.
+    `),t(),e(407,`
+    `),n(408,"li"),e(409,`
+      `),n(410,"strong"),e(411,`
+        `),n(412,"a",17),e(413,"R"),t(),e(414,` (with
+        `),n(415,"a",18),e(416,"RStudio"),t(),e(417,") "),t(),e(418,`: Open-source environment with virtually unlimited extensibility through packages \u2013
+      very powerful, but requires programming skills.
+    `),t(),e(419,`
+    `),n(420,"li"),e(421,`
+      `),n(422,"strong"),e(423,`
+        `),n(424,"a",19),e(425,"XLSTAT"),t(),e(426,` &
+        `),n(427,"a",20),e(428,"SigmaXL"),t(),e(429," "),t(),e(430,`: Excel add-ins for fast descriptive and inferential analyses directly within
+      spreadsheets.
+    `),t(),e(431,`
+  `),t(),e(432,`
+
+  `),n(433,"p"),e(434,`
+    Those who can program and are willing to invest time often turn to R or Python to save
+    costs. Users seeking a simple yet powerful solution will find
+    `),n(435,"strong"),e(436,"numiqo"),t(),e(437,` to be the ideal choice. If you require an extensive feature
+    set and are prepared to pay higher licensing fees, `),n(438,"strong"),e(439,"JMP"),t(),e(440,` or
+    `),n(441,"strong"),e(442,"SPSS"),t(),e(443,` are excellent options. And those comfortable with an Excel
+    add-in will benefit from the practical and cost-efficient solution that
+    `),n(444,"strong"),e(445,"SigmaXL"),t(),e(446,` provides.
+  `),t(),e(447,`
+
+  `),n(448,"h2"),e(449,"Conclusion"),t(),e(450,`
+
+  `),n(451,"p"),e(452,`
+    If you are searching for a Minitab alternative that offers powerful
+    `),n(453,"b"),e(454,"statistical analysis"),t(),e(455,", "),n(456,"b"),e(457,"Six Sigma software"),t(),e(458,` tools, and an easy-to-use
+    interface, numiqo is the perfect solution. With features like
+    `),n(459,"b"),e(460,`hypothesis testing, measurement system analysis, process capability, statistical
+      process control`),t(),e(461,`
+    and `),n(462,"b"),e(463,"DoE"),t(),e(464,`, it provides everything needed for effective data-driven
+    decision-making.
+  `),t(),e(465,`
+
+  `),n(466,"p"),e(467,`
+    `),n(468,"b"),e(469,"Try numiqo today and streamline your statistical analysis with ease!"),t(),e(470,`
+  `),t(),e(471,`
+
+  `),n(472,"h3"),e(473,"Have questions? I'm happy to help!"),t(),e(474,`
+  `),n(475,"p"),e(476,"For inquiries, feel free to contact me at: mathias.jesussek@numiqo.com"),t(),e(477,`
+`),t(),e(478,`
+`))},dependencies:[y],styles:[".updated[_ngcontent-%COMP%]{font-size:.9rem;color:#6b7280;margin-top:.25rem}"]})}}return r})();var gt=(()=>{class r{static{this.\u0275fac=function(a){return new(a||r)}}static{this.\u0275cmp=v({type:r,selectors:[["app-rebrand"]],decls:97,vars:1,consts:[[1,"center750","mb-5","mt-5"],[1,"mb-0"],[1,"mb-3",2,"line-height","1.2"],["datetime","2025-09-08"],["alt","DATAtab is renaming to numiqo","title","DATAtab is renaming to numiqo","src","assets/tutorial/DATAtab_is_renaming_to_numiqo.png"],["routerLink","/statistics-calculator/descriptive-statistics"],[3,"linkID"]],template:function(a,o){a&1&&(n(0,"article",0),e(1,`
+  `),n(2,"h1",1),e(3,`
+    DATAtab is now numiqo
+    `),e(4,`
+  `),t(),e(5,`
+  `),n(6,"p",2),e(7,`
+    `),n(8,"small"),e(9,"Author Dr. Hannah Volk-Jesussek "),c(10,"br"),e(11,`
+      Updated `),n(12,"time",3),e(13,"September 08, 2025"),t()(),e(14,`
+  `),t(),e(15,`
+  `),n(16,"p")(17,"b"),e(18,"We're excited to share a big news. DATAtab has rebranded as Numiqo."),t()(),e(19,`
+  `),c(20,"img",4),e(21,`
+
+  `),n(22,"p"),e(23,`
+    We have a new name, but nothing will change for you\u2014and of course our team will also
+    remain the same.
+  `),t(),e(24,`
+
+  `),n(25,"p"),e(26,`
+    `),n(27,"b"),e(28,`
+      If you have an account for our
+      `),n(29,"a",5),e(30,"statistics software"),t(),e(31,`, nothing will change there. You can simply log in as usual with your email address
+      and password.`),t(),e(32,`
+    Our YouTube channel will, of course, stay up; we'll just rename it.
+  `),t(),e(33,`
+  `),c(34,"app-video-frame",6),e(35,`
+  `),n(36,"h2"),e(37,"Why are we changing our name?"),t(),e(38,`
+  `),n(39,"p"),e(40,`
+    OK, now to the questions: why are we changing our name? We've built up DATAtab for
+    more than five years and we're very happy to have such a great community like you.
+  `),t(),e(41,`
+
+  `),n(42,"p"),e(43,`
+    But of course also with the new name we will keep giving our best to create great
+    learning content on statistics\u2014we already have a whole list of new topics. Now to the
+    question: why are we doing this?
+  `),t(),e(44,`
+  `),n(45,"p"),e(46,`
+    Well, Mathias, the founder of DATAtab, received an email from a law firm representing
+    Minitab.
+  `),t(),e(47,`
+  `),n(48,"p"),e(49,`
+    If, like me, you come from the social and economic sciences or market research, you
+    probably know the statistic software SPSS or R. But if you work, for example, in
+    quality management at an industrial company, then you will likely know Minitab. In
+    short, it is a large statistics software from the USA.
+  `),t(),e(50,`
+
+  `),n(51,"p"),e(52,"So we received an email\u2014let me quote a few lines:"),t(),e(53,`
+
+  `),n(54,"p"),e(55,`
+    `),n(56,"i"),e(57,`\u201CIt has recently come to our attention that Datatab adopted DATATAB in connection
+      with statistical software [\u2026]\u201D`),t(),e(58,`
+  `),t(),e(59,`
+  `),n(60,"p"),e(61,`
+    `),n(62,"i"),e(63,`\u201CThis use and registration is likely to cause confusion [\u2026]\u201D \u201CSpecifically, DATATAB
+      utilizes the identical suffix element as MINITAB.\u201D
+    `),t(),e(64,`
+  `),t(),e(65,`
+
+  `),n(66,"p"),e(67,`
+    `),n(68,"i"),e(69,`\u201CAccordingly, we request an immediate worldwide cessation of use of the DATATAB
+      Marks.\u201D`),t(),e(70,`
+  `),t(),e(71,`
+  `),n(72,"p"),e(73,`
+    Well, DATAtab is a web app, and you can analyze your data in a browser tab. Hence the
+    name data-tab.
+  `),t(),e(74,`
+
+  `),n(75,"p"),e(76,`
+    `),n(77,"b"),e(78,`
+      But long story short, we are not interested in any legal confrontation, so: we
+      decided to rebrand.`),t(),e(79,`
+  `),t(),e(80,`
+
+  `),n(81,"h2"),e(82,"numiqo"),t(),e(83,`
+  `),n(84,"p"),e(85,`
+    Our new name will be numiqo! And we think we've found a great new name that, in my
+    opinion, sounds and looks even better, cooler and fresher than our previous name,
+    DATAtab. But of course that's a matter of taste. :)
+  `),t(),e(86,`
+  `),n(87,"p"),e(88,`
+    So we're already looking forward to the complete rebranding! And we're really excited
+    to keep creating many great new statistics videos for you in the future and to
+    continue following our motto: making statistics simple and easy to understand.
+  `),t(),e(89,`
+  `),n(90,"p"),e(91,"Stay tuned! Lots of love and see you soon."),t(),e(92,`
+  `),n(93,"p"),e(94,"Hannah"),t(),e(95,`
+`),t(),e(96,`
+`)),a&2&&(s(34),m("linkID","_r4nCoCXCkI"))},dependencies:[y,re,nt],encapsulation:2})}}return r})();var bt=(()=>{class r{static{this.\u0275fac=function(a){return new(a||r)}}static{this.\u0275cmp=v({type:r,selectors:[["app-spss-alternative"]],decls:354,vars:0,consts:[[1,"center750","mb-5","mt-5"],[1,"mb-0"],[1,"mb-3","mt-2"],["routerLink","/statistics-calculator/descriptive-statistics"],["routerLink","/statistics-calculator/hypothesis-test"],["routerLink","/statistics-calculator/regression"],["routerLink","/statistics-calculator/survival-analysis"],["routerLink","/statistics-calculator/reliability-analysis"],["routerLink","/statistics-calculator/cluster/hierarchical-cluster-analysis-calculator"],[1,"table","result-table",2,"font-size","18px"],["alt","Selected customers","title","Selected customers","src","assets/tutorial/Selected_customers.png"],["href","https://www.minitab.com"],["href","https://www.sas.com/"],["href","https://www.jmp.com/"],["href","https://www.r-project.org/"],["href","https://posit.co/"],["href","https://www.stata.com/"],["href","https://www.jamovi.org/"],["href","https://jasp-stats.org/"],["routerLink","/minitab-alternative"]],template:function(a,o){a&1&&(n(0,"article",0),e(1,`
+  `),n(2,"h1",1),e(3,`
+    SPSS Alternative
+    `),e(4,`
+  `),t(),e(5,`
+
+  `),n(6,"h2",2),e(7,"numiqo \u2014 a budget-friendly, browser-based alternative to SPSS"),t(),e(8,`
+
+  `),e(9,`
+
+  `),n(10,"p"),e(11,`
+    Many researchers, students, and analysts rely on SPSS for data analysis. If you\u2019re
+    looking for an SPSS alternative that\u2019s easy to use, cost-effective, and covers the
+    most important statistical methods, numiqo is a great fit \u2014 no installation, no steep
+    learning curve.
+  `),t(),e(12,`
+
+  `),n(13,"h2"),e(14,"Why choose numiqo instead of SPSS?"),t(),e(15,`
+  `),n(16,"p"),e(17,`
+    numiqo streamlines core statistical workflows for survey analysis, psychology,
+    education, health and business research. It runs directly in your browser and focuses
+    on clarity and guidance, so you can go from data to result without wrestling with
+    complex menus or syntax.
+  `),t(),e(18,`
+
+  `),n(19,"h2"),e(20,"Key features in numiqo"),t(),e(21,`
+
+  `),n(22,"h3"),e(23,`
+    `),n(24,"a",3),e(25,"1. Descriptive Statistics"),t(),e(26,`
+  `),t(),e(27,`
+  `),n(28,"ul"),e(29,`
+    `),n(30,"li"),e(31,"Tables, charts and summaries for numeric & categorical data"),t(),e(32,`
+    `),n(33,"li"),e(34,"Central tendency, dispersion, confidence intervals"),t(),e(35,`
+    `),n(36,"li"),e(37,"Quick export of results and graphs"),t(),e(38,`
+  `),t(),e(39,`
+
+  `),n(40,"h3"),e(41,`
+    `),n(42,"a",4),e(43,"2. Hypothesis Testing"),t(),e(44,`
+  `),t(),e(45,`
+  `),n(46,"ul"),e(47,`
+    `),n(48,"li"),e(49,"T-tests (one-sample, two-sample, paired)"),t(),e(50,`
+    `),n(51,"li"),e(52,"ANOVA (one-way, two-way)"),t(),e(53,`
+    `),n(54,"li"),e(55,"Chi-square tests"),t(),e(56,`
+    `),n(57,"li"),e(58,"Non-parametric tests (Mann\u2013Whitney, Kruskal\u2013Wallis)"),t(),e(59,`
+  `),t(),e(60,`
+
+  `),n(61,"h3"),e(62,`
+    `),n(63,"a",5),e(64," 3. Regression Analysis "),t(),e(65,`
+  `),t(),e(66,`
+  `),n(67,"ul"),e(68,`
+    `),n(69,"li"),e(70,"Linear Regression"),t(),e(71,`
+    `),n(72,"li"),e(73,"Logistic Regression"),t(),e(74,`
+    `),n(75,"li"),e(76,"Lasso and Ridge Regression"),t(),e(77,`
+  `),t(),e(78,`
+
+  `),n(79,"h3"),e(80,`
+    `),n(81,"a",6),e(82," 4. Survival Analysis "),t(),e(83,`
+  `),t(),e(84,`
+  `),n(85,"ul"),e(86,`
+    `),n(87,"li"),e(88,"Kaplan-Meier"),t(),e(89,`
+    `),n(90,"li"),e(91,"Cox Regression"),t(),e(92,`
+  `),t(),e(93,`
+
+  `),n(94,"h3"),e(95,`
+    `),n(96,"a",7),e(97,`
+      5. Reliability analysis
+    `),t(),e(98,`
+  `),t(),e(99,`
+
+  `),n(100,"ul"),e(101,`
+    `),n(102,"li"),e(103,"Cronbach's Alpha"),t(),e(104,`
+    `),n(105,"li"),e(106,"Cohen's Kappa"),t(),e(107,`
+    `),n(108,"li"),e(109,"Fleiss Kappa"),t(),e(110,`
+    `),n(111,"li"),e(112,"Kendall's Tau"),t(),e(113,`
+    `),n(114,"li"),e(115,"Kendall's W"),t(),e(116,`
+    `),n(117,"li"),e(118,"Intra Class Correlation"),t(),e(119,`
+  `),t(),e(120,`
+
+  `),n(121,"h3"),e(122,`
+    `),n(123,"a",8),e(124,`
+      6. Cluster Analysis
+    `),t(),e(125,`
+  `),t(),e(126,`
+  `),n(127,"ul"),e(128,`
+    `),n(129,"li"),e(130,"k-means clustering"),t(),e(131,`
+    `),n(132,"li"),e(133,"Hierarchical cluster analysis"),t(),e(134,`
+  `),t(),e(135,`
+  `),n(136,"h3"),e(137,"And many more..."),t(),e(138,`
+  `),n(139,"h2"),e(140,"Fair Pricing"),t(),e(141,`
+  `),n(142,"p"),e(143,`
+    A major advantage of numiqo over traditional desktop suites like SPSS is its
+    `),n(144,"b"),e(145,"affordable pricing"),t(),e(146,`. You get the essentials for professional analysis without
+    heavyweight licensing costs.
+  `),t(),e(147,`
+
+  `),n(148,"table",9),e(149,`
+    `),n(150,"thead"),e(151,`
+      `),n(152,"tr"),e(153,`
+        `),c(154,"th"),e(155,`
+        `),n(156,"th"),e(157,"Net price per year"),t(),e(158,`
+      `),t(),e(159,`
+    `),t(),e(160,`
+    `),n(161,"tbody"),e(162,`
+      `),n(163,"tr"),e(164,`
+        `),n(165,"th"),e(166,"Single license"),t(),e(167,`
+        `),n(168,"td"),e(169,"\u20AC 289"),t(),e(170,`
+      `),t(),e(171,`
+      `),n(172,"tr"),e(173,`
+        `),n(174,"th")(175,"b"),e(176,"Flat* Small to medium enterprises"),t()(),e(177,`
+        `),n(178,"td")(179,"b"),e(180,"\u20AC 2299"),t()(),e(181,`
+      `),t(),e(182,`
+      `),n(183,"tr"),e(184,`
+        `),n(185,"th")(186,"b"),e(187,"Flat* Large enterprises"),t()(),e(188,`
+        `),n(189,"td")(190,"b"),e(191,"\u20AC 3499"),t()(),e(192,`
+      `),t(),e(193,`
+    `),t(),e(194,`
+  `),t(),e(195,`
+
+  `),n(196,"h4"),e(197,"Business Flat Pricing"),t(),e(198,`
+  `),n(199,"p"),e(200,`
+    With the Business Flat, every employee can access powerful statistical tools without
+    additional costs per seat. More than 25 customers already trust the Business Flat.
+  `),t(),e(201,`
+  `),n(202,"p"),e(203,`
+    Small and medium-sized companies pay \u20AC2,299 per year, large companies \u20AC3,499 \u2014 for
+    unlimited access for all employees, regardless of how many use numiqo.
+  `),t(),e(204,`
+
+  `),n(205,"h5"),e(206,"Selected Customers"),t(),e(207,`
+  `),c(208,"img",10),e(209,`
+
+  `),n(210,"h2"),e(211,"Benefits of using numiqo"),t(),e(212,`
+  `),n(213,"ul"),e(214,`
+    `),n(215,"li")(216,"b"),e(217,"Ease of use"),t(),e(218,": Clear interface and guided outputs."),t(),e(219,`
+    `),n(220,"li")(221,"b"),e(222,"Web-based"),t(),e(223,": Works on Windows, macOS, Linux & Chromebooks."),t(),e(224,`
+    `),n(225,"li")(226,"b"),e(227,"Privacy-first"),t(),e(228,": Calculations run locally in your browser."),t(),e(229,`
+    `),n(230,"li")(231,"b"),e(232,"Cost-effective"),t(),e(233,": Lower pricing than many desktop suites like SPSS."),t(),e(234,`
+    `),n(235,"li"),e(236,`
+      `),n(237,"b"),e(238,"Comprehensive"),t(),e(239,`: Covers everyday analyses for teaching, research, and quality
+      work.
+    `),t(),e(240,`
+  `),t(),e(241,`
+
+  `),n(242,"h2"),e(243,"Data Security"),t(),e(244,`
+  `),n(245,"p"),e(246,`
+    numiqo is designed so that all calculations are performed directly in your web browser
+    (on your computer) and not on an external server. Your data is not transmitted to any
+    external service.
+  `),t(),e(247,`
+
+  `),n(248,"h2"),e(249,"Other Alternatives"),t(),e(250,`
+  `),n(251,"p"),e(252,"There are, of course, other high-quality alternatives to SPSS."),t(),e(253,`
+  `),n(254,"ul"),e(255,`
+    `),n(256,"li"),e(257,`
+      `),n(258,"strong")(259,"a",11),e(260,"Minitab"),t()(),e(261,`: Popular with engineers and quality teams; strong in quality and process analysis.
+    `),t(),e(262,`
+    `),n(263,"li"),e(264,`
+      `),n(265,"strong")(266,"a",12),e(267,"SAS"),t()(),e(268,`: Enterprise-grade analytics platform with broad procedures and data management.
+    `),t(),e(269,`
+    `),n(270,"li"),e(271,`
+      `),n(272,"strong")(273,"a",13),e(274,"JMP (SAS)"),t()(),e(275,`: Interactive, visual statistics environment for exploration and DoE.
+    `),t(),e(276,`
+    `),n(277,"li"),e(278,`
+      `),n(279,"strong")(280,"a",14),e(281,"R"),t(),e(282,` (with
+        `),n(283,"a",15),e(284,"RStudio/Posit"),t(),e(285,")"),t(),e(286,`: Open-source, extensible with thousands of packages.
+    `),t(),e(287,`
+    `),n(288,"li"),e(289,`
+      `),n(290,"strong")(291,"a",16),e(292,"Stata"),t()(),e(293,`: Widely used in economics, epidemiology and the social sciences.
+    `),t(),e(294,`
+    `),n(295,"li"),e(296,`
+      `),n(297,"strong")(298,"a",17),e(299,"jamovi"),t()(),e(300,` &
+      `),n(301,"strong")(302,"a",18),e(303,"JASP"),t()(),e(304,`: Free, GUI-driven tools built on R for teaching and research.
+    `),t(),e(305,`
+  `),t(),e(306,`
+
+  `),n(307,"p"),e(308,`
+    If you need a simple yet powerful solution with fair pricing,
+    `),n(309,"strong"),e(310,"numiqo"),t(),e(311,` is ideal. If you want a larger ecosystem or scripting and
+    don\u2019t mind higher complexity, tools like `),n(312,"strong"),e(313,"R"),t(),e(314,", "),n(315,"strong"),e(316,"Stata"),t(),e(317,`,
+    or `),n(318,"strong"),e(319,"JMP"),t(),e(320,` are great choices. For quality engineering contexts,
+    `),n(321,"strong"),e(322,"Minitab"),t(),e(323,` remains a strong option. Of course, numiqo can also be used
+    as an `),n(324,"a",19),e(325,"alternative to Minitab"),t(),e(326,`.
+  `),t(),e(327,`
+
+  `),n(328,"h2"),e(329,"Conclusion"),t(),e(330,`
+  `),n(331,"p"),e(332,`
+    Looking for an `),n(333,"b"),e(334,"SPSS alternative"),t(),e(335,` that delivers the essentials for
+    `),n(336,"b"),e(337,"statistical analysis"),t(),e(338,` with a clean, guided workflow? numiqo provides
+    `),n(339,"b"),e(340,"descriptives, hypothesis tests, DoE, SPC, process capability"),t(),e(341,` and more \u2014 all in
+    your browser.
+  `),t(),e(342,`
+
+  `),n(343,"p")(344,"b"),e(345,"Try numiqo today and make analysis clear, fast, and affordable."),t()(),e(346,`
+
+  `),n(347,"h3"),e(348,"Have questions? I'm happy to help!"),t(),e(349,`
+  `),n(350,"p"),e(351,"For inquiries, feel free to contact me at: mathias.jesussek@numiqo.com"),t(),e(352,`
+`),t(),e(353,`
+`))},dependencies:[y],encapsulation:2})}}return r})();var Et=(()=>{class r{static{this.\u0275fac=function(a){return new(a||r)}}static{this.\u0275mod=J({type:r,bootstrap:[dt]})}static{this.\u0275inj=$({providers:[it,tt,et,je(We(),He()),{provide:Ae,useValue:"serverApp"}],imports:[re,Qe,Ke,Xe.forRoot([{path:"premium/packages/enterprise",redirectTo:"premium/packages",pathMatch:"full"},{path:"statistics-calculator",redirectTo:"statistics-calculator/descriptive-statistics",pathMatch:"full"},{path:"tutorial",redirectTo:"tutorial/get-started",pathMatch:"full"},{path:"rebranding-to-numico",component:gt,title:"DATAtab is rebranding to numiqo"},{path:"about-us",loadChildren:()=>import("./chunk-EV64QIEW.js").then(i=>i.FaqModule)},{path:"minitab-alternative",component:St,title:"Minitab Alternative: numiqo vs. Minitab for SPC, DoE & MSA"},{path:"spss-alternative",component:bt,title:"SPSS Alternative (2025): numiqo vs. SPSS"},{path:"privacy",loadChildren:()=>import("./chunk-BJD4ZDZQ.js").then(i=>i.PrivacyModule)},{path:"tutorial",loadChildren:()=>import("./chunk-24ZIZK7T.js").then(i=>i.TutorialModule)},{path:"premium",loadChildren:()=>import("./chunk-FKFTBEI5.js").then(i=>i.PremiumModule)},{path:"statistics-book",loadChildren:()=>import("./chunk-GLDZ2CKU.js").then(i=>i.BookModule)},{path:"statistics-software",loadChildren:()=>import("./chunk-BA6YGF5B.js").then(i=>i.StatistikSoftwareModule)},{path:"statistics-calculator",loadChildren:()=>import("./chunk-5FAKT4BI.js").then(i=>i.CalculatorModule)},{path:"",loadChildren:()=>import("./chunk-Q6E4HVTF.js").then(i=>i.HomeModule)},{path:"contact",loadChildren:()=>import("./chunk-OM65JNRF.js").then(i=>i.ContactModule)},{path:"**",redirectTo:""}],{initialNavigation:"enabledBlocking"}),ft.register("ngsw-worker.js",{enabled:le.production,registrationStrategy:"registerImmediately"})]})}}return r})();le.production&&void 0;function vt(){ze().bootstrapModule(Et).catch(r=>console.error(r))}document.readyState==="complete"?vt():document.addEventListener("DOMContentLoaded",vt);
