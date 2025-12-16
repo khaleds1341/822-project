@@ -1,2 +1,15 @@
-pip install datasets numpy pandas regex textstat spacy spacy-Arabic camel-tools transformers openpyxl scipy sentence-transformers tensorflow tf_keras sentence_transformers   
+datasets
+numpy 
+pandas
+regex
+textstat
+spacy
+transformers 
+openpyxl 
+scipy
+sentence-transformers 
+tensorflow
+tf_keras
+openpyxl
+
  
