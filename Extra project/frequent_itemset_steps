@@ -1,0 +1,50 @@
+// Frequent Itemset Mining Steps
+digraph {
+	step1 [label="Step k=1
+Candidates:
+pen
+eraser
+pencil
+ruler
+notebook
+marker
+Frequent:
+pen(7)
+eraser(4)
+pencil(6)
+ruler(4)
+notebook(7)
+marker(4)" fillcolor=lightblue shape=box style="rounded,filled"]
+	step2 [label="Step k=2
+Candidates:
+eraser, ruler
+notebook, pencil
+eraser, pen
+marker, ruler
+notebook, ruler
+marker, pencil
+marker, notebook
+pencil, ruler
+eraser, marker
+eraser, pencil
+notebook, pen
+pen, pencil
+marker, pen
+eraser, notebook
+pen, ruler
+Frequent:
+notebook, pencil(4)
+eraser, pen(3)
+marker, notebook(4)
+eraser, pencil(3)
+notebook, pen(5)
+pen, pencil(4)" fillcolor=lightblue shape=box style="rounded,filled"]
+	step3 [label="Step k=3
+Candidates:
+notebook, pen, pencil
+eraser, pen, pencil
+Frequent:
+notebook, pen, pencil(3)" fillcolor=lightblue shape=box style="rounded,filled"]
+	step1 -> step2
+	step2 -> step3
+}
